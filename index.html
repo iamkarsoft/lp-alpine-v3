@@ -4,10 +4,24 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Alpine JS</title>
+<script src="https://unpkg.com/alpinejs" defer></script>	
 </head>
 <body>
+	<!-- <div x-data="{visible: false}">
+		<div x-show="visible">Show some content</div>
+	</div>
 
+	<div x-data="{records: [1,2,3,4,5]}">
+		<div x-show="records.length >= 1 ">show some content</div>
+	</div> -->
 
-<script src="//unpkg.com/alpinejs" defer></script>	
+	<div x-data="{show: false}">
+		<button x-on:click="show=true">Show</button>
+		<button x-on:click="show=!show">Toggle</button>
+		<div x-show="show">
+			Show me something
+		</div>
+	</div>
+
 </body>
 </html>
