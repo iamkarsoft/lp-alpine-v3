@@ -7,7 +7,31 @@
 <script src="https://unpkg.com/alpinejs" defer></script>	
 </head>
 <body>
+	<div
 
+	x-data="{
+			query:'',
+			image:'',
+			getImage(){
+				this.image= `https://source.unsplash.com/1600x900/?${this.query}`
+			},
+		}"
+	>
+		
+	<form 
+		x-on:submit.prevent="getImage",
+		
 
+	>
+
+	<input type="search" x-model="query">
+		
+	<button type="submit">search</button>
+	</form>
+	<div style="margin-top: 40px;">
+		<img x-bind:src="image" alt="" style="width:300px">
+	</div>
+
+	</div>
 </body>
 </html>
