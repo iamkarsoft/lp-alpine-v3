@@ -5,9 +5,26 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Alpine JS</title>
 <script src="https://unpkg.com/alpinejs" defer></script>	
+<style>
+	.bold{
+		font-weight: bolder;
+	}
+
+	.blue{
+		color: blue;
+	}
+</style>
 </head>
 <body>
+	<div x-data>
+		<span class="blue" x-bind:class="{'bold': true}">Am I bold?</span>
+	</div>
 
+	<form action="" x-data="{name: ''}">
+		<input type="text" x-model="name">
+		<button type="submit" x-bind:disabled="name==''">lets go</button>
+
+	</form>
 
 </body>
 </html>
