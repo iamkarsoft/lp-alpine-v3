@@ -20,8 +20,43 @@
 			<span x-text='hello'></span>
 
 	</div> -->
-	<div x-data="{body:'<h1>Hello</h1>'}">
-		<div x-html="body"></div>	
+	<div x-data="{numbers:[1,2,3,4,5]}">
+		<template x-for="number in numbers">
+			<span x-text="number"></span>
+			
+		</template>
+		
+	</div>
+
+
+	<div x-data="{fruits:['banana','mango','guava']}">
+		<template x-for="fruit in fruits">
+			<span x-text="`${fruit} `"></span>
+			
+		</template>
+		
+	</div>
+
+	<div x-data="{
+		people:
+		[
+			{
+				id:1,
+				name:'ramos'
+			},
+			{
+				id:2,
+				name:'kofi'
+			}
+
+		]
+
+	}">
+
+	<template x-for="person in people" :key="person.id">
+		<div x-text="person.name"></div>
+	</template>
+		
 	</div>
 
 </body>
