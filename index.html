@@ -16,15 +16,13 @@
 </style>
 </head>
 <body>
-	<div x-data>
-		<span class="blue" x-bind:class="{'bold': true}">Am I bold?</span>
+	<!-- <div x-data="{hello:'world'}">
+			<span x-text='hello'></span>
+
+	</div> -->
+	<div x-data="{body:'<h1>Hello</h1>'}">
+		<div x-html="body"></div>	
 	</div>
-
-	<form action="" x-data="{name: ''}">
-		<input type="text" x-model="name">
-		<button type="submit" x-bind:disabled="name==''">lets go</button>
-
-	</form>
 
 </body>
 </html>
